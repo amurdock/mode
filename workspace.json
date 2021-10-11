@@ -19,7 +19,6 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/lib-1/**/*.ts"]
           }
@@ -52,7 +51,6 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/lib-2/**/*.ts"]
           }
