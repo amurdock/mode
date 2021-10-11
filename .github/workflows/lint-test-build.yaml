@@ -1,0 +1,16 @@
+name: lint test and build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: mansagroup/nrwl-nx-action@v2
+      with:
+        targets: lint,test,build
+        affected: 'true'
