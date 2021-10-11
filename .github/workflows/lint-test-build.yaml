@@ -10,7 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: mansagroup/nrwl-nx-action@v2
-      with:
-        targets: lint,test,build
-        affected: 'true'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'yarn'
+      - run: yarn install
+      - uses: mansagroup/nrwl-nx-action@v2
+        with:
+          targets: lint,test,build
+          affected: 'true'
